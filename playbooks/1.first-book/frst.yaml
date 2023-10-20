@@ -4,4 +4,4 @@
 
   tasks:
   - name: test connectivity
-    ping:
+    ping: # module is ping 
