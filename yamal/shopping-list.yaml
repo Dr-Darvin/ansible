@@ -1,0 +1,21 @@
+# list
+shopping:
+  - eggs
+  - milk
+  - bread
+
+# dictonaries
+vegitables:
+  carrots: 2
+  beans: 3
+
+# mixture of list & dictionaries
+purchased:
+  fruit:
+    apple: 1
+    banana: 2
+  needToBuy:
+    - coffee: 1
+    - flour: 2
+    - tea: 3
+    

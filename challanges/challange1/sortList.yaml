@@ -1,0 +1,40 @@
+# sort items by category and color
+
+# ADD THE TOTAL AT THE END
+
+items:
+  - banana
+  - orange
+  - stawberry
+  - broccoli
+  - cabbage
+  - grapes
+  - carrots
+  - tommato
+  - peppers
+  - watermelon
+  - lettuce
+
+fruit:
+  yellow:
+    - banana
+  orange:
+    - orange
+  red:
+    - stawberry
+    - watermelon
+  total: 4
+
+
+vegitables:
+  orange:
+    - carrots
+  red:
+    - tommato
+  green:
+    - broccoli
+    - cabbage
+    - peppers
+    - lettuce
+    - grapes
+  total: 7
