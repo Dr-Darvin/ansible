@@ -1,0 +1,13 @@
+---
+- name: cpy files from local to remote
+  hosts: all
+
+  tasks:
+    - name: copy files
+      become: trure # login as root
+      copy:
+        src: copy-content.txt
+        dest: /home/isuru
+        owner: isuru
+        group: isuru
+        mode: 0644
