@@ -4,7 +4,7 @@
 
   tasks:
     - name: copy files
-      become: trure # login as root
+      become: yes # login as root
       copy:
         src: copy-content.txt
         dest: /home/isuru
