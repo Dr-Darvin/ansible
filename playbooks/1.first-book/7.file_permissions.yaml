@@ -4,7 +4,7 @@
 
   tasks:
     - name: change permissions
+      become: yes
       file:
-        become: yes
         path: /home/isuru/ansible
         mode: 777
