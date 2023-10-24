@@ -1,0 +1,25 @@
+---
+- name: setup apache and open port 80 on firewall
+  hosts: all
+
+  tasks:
+    - name: install apache
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+
+    - name: start apache2 service
+      service: 
+        name: apache2
+        state: started
+
+    - name: open port 80
+      firewalld:
+        service: http
+        permanent: true
+        state: enabled
+
+    - name: restart firewalld service
+      service:
+        name: firewalld 
+        state: reloaded
