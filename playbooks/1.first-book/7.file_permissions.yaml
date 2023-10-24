@@ -1,0 +1,9 @@
+---
+- name: cheange file permissions
+  hosts: all
+
+  tasks:
+    - name: change permissions
+      file:
+        path: /home/isuru/ansible
+        mode: 777
