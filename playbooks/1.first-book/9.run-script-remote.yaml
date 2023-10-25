@@ -4,4 +4,4 @@
 
   tasks:
   - name: run shell script
-    shell: "/home/isuru/scripts/file-create.sh"
+    shell: "/home/isuru/ansible/scripts" # place the sript in here 
