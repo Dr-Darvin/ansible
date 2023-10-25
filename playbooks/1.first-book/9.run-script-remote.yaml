@@ -5,4 +5,4 @@
   tasks:
   - name: run shell script
     become: yes
-    shell: "/home/isuru/ansible/scripts" # place the sript in here 
+    shell: "/home/isuru/ansible/scripts/file-create.sh" # place the sript in here 
