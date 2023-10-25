@@ -1,0 +1,7 @@
+---
+- name: run script on remote 
+  hosts: all
+
+  tasks:
+  - name: run shell script
+    shell: "/home/isuru/scripts/file-create.sh"
