@@ -1,6 +1,6 @@
 ---
 - name: scedule a cronjob in remote server
-  host: all
+  hosts: all
 
   tasks:
     - name: add cronjob 
