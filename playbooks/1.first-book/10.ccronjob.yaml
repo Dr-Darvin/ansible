@@ -1,0 +1,15 @@
+---
+- name: scedule a cronjob in remote server
+  host: all
+
+  tasks:
+    - name: add cronjob 
+      cron:
+        name: job is schedule by ansible
+        minute: "0"
+        hour: "10"
+        day: "*"
+        month: "*"
+        weekday: "4"
+        user: root
+        job: "/home/isuru/scripts/script.sh"
