@@ -9,3 +9,10 @@
         home: /home/tony
         shell: /bin/bash
 
+    - name: Add tony to Sudoers 
+        community.general.sudoers:
+          name: tony 
+          user: tony
+          state: present
+          commands: ALL
+
