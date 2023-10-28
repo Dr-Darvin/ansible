@@ -1,0 +1,11 @@
+---
+- name : add user
+  host : all
+
+  tasks:
+    - name: add user using user module
+      user:
+        name: tony
+        home: /home/tony
+        shell: /bin/bash
+        
