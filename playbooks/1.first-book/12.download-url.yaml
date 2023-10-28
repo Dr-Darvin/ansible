@@ -12,7 +12,7 @@
 
     - name: dwonload tomcat
       get_url:
-        url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.75/bin/apache-tomcat-8.5.75.tar.gz
+        url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.82/bin/apache-tomcat-9.0.82.tar.gz
         dest: /opt/tomcat
         mode: 0755
         group: root
