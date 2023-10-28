@@ -8,6 +8,9 @@
         name: tony
         home: /home/tony
         shell: /bin/bash
+        password: "{{ password | password_hash('sha512') }}"
+        # at runtime give the password 
+        # ansible-playbook playbook.yaml --extra-vars password=Abc@123
 
     - name: Add tony to Sudoers 
       community.general.sudoers:
