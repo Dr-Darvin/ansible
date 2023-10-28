@@ -1,6 +1,6 @@
 ---
 - name : add user
-  host : all
+  hosts : all
 
   tasks:
     - name: add user using user module
@@ -8,4 +8,4 @@
         name: tony
         home: /home/tony
         shell: /bin/bash
-        
+
