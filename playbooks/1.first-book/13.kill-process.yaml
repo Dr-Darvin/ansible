@@ -1,0 +1,14 @@
+---
+- name: Kill a process on a remote server
+  hosts: all
+  become: yes  # Use sudo to execute the task as a superuser
+
+  tasks:
+    - name: Find the process ID (PID) by process name
+      shell: ps aux | grep 'process_name' | grep -v grep | awk '{print $2}'
+      register: process_pid #capture the output or result of a task and store it in a variable.
+      ignore_errors: yes  # Ignore errors in case the process is not found
+
+    - name: Kill the process
+      command: kill -9 "{{ process_pid.stdout }}" # hy using process_pid.stdout can get the stored value in process_pid
+      when: process_pid.rc == 0  # Only execute if the process was found. here .rc means return code of process_pid
