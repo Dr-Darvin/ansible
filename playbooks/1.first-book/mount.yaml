@@ -1,0 +1,30 @@
+---
+- name: mount a disk in linux
+  hosts: all
+
+  tasks:
+    - name: create new partition
+      parted:
+        name: files
+        label: gpt # or mbr
+        device: /dev/sdb
+        number: 1
+        state: present
+        part_start: 1MiB
+        part_end: 2040MiB
+
+    - name: create a file system
+      filesystem:
+        dev: /dev/sdb1
+        fstype: ext4
+
+    - name: create mount directory 
+      file: 
+        path: /data
+        state: directory 
+
+    - name: mount the filesystem 
+      mount:
+        src: /dev/sdb1
+        fstype: ext4
+        state: mounted
