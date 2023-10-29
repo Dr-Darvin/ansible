@@ -26,5 +26,6 @@
     - name: mount the filesystem 
       mount:
         src: /dev/sdb1
+        path: /data
         fstype: ext4
         state: mounted
