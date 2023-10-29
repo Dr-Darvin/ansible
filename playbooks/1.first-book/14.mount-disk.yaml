@@ -6,12 +6,12 @@
     - name: create new partition
       parted:
         name: files
-        label: mbr
+        label: gpt
         device: /dev/sdb
         number: 1
         state: present
         part_start: 1MiB
-        pard-end: 2040MiB
+        part_end: 2040MiB
 
     - name: create a file system
       filesystem:
