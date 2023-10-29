@@ -28,4 +28,4 @@
         path: /mnt/data
         src: /dev/sdb1
         fstype: ext4
-        state: mounted
+        state: present
