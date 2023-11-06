@@ -1,0 +1,8 @@
+---
+- name: Run a command on a Linux host
+  hosts: all
+  become: yes  # Use sudo to execute the command (optional)
+
+  tasks:
+    - name: Execute a command
+      command: hostname
