@@ -5,4 +5,4 @@
 
   tasks:
     - name: Execute a command
-      command: hostname
+      command: mkdir /home/isuru/new1
