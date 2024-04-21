@@ -1,0 +1,22 @@
+---
+- name: install apache2 
+  ansible.builtin.apt:
+    name: apache2
+    state: present
+
+- name: start apache2
+  service:
+    name: apache2
+    state: started
+
+- name: open port for http
+  firewalld:
+    service: http
+    permanent: true
+    state: enabled
+
+- name: restart firewalld 
+  service:
+    name: firewalld
+    state: reloaded
+    
