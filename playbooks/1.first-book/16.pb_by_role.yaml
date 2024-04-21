@@ -1,0 +1,10 @@
+---
+- name: full install 
+  hosts: all
+  roles:
+    - fulinstall
+
+- name: basic install 
+  hosts: localhost
+  roles:
+    - basicinstall
