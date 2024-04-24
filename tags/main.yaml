@@ -18,3 +18,6 @@
 
 # when running give as follows
 # ansible-playook pb_main.yaml -t i-pache2
+
+# to get all the tags in a playook.
+#  ansible-playbook play_book_name.yaml --list-tags 
