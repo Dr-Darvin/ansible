@@ -1,0 +1,20 @@
+---
+- name: play with tags
+  hosts: all 
+  tasks:
+    - name: install apache2 
+      ansible.builtin.apt: 
+        name: apache2
+        state: present
+      tags:
+        - i-apache2
+
+    - name: start apache2 
+      service:
+        name: apache2
+        state: started
+      tags:
+        - s-apache2
+
+# when running give as follows
+# ansible-playook pb_main.yaml -t i-pache2
