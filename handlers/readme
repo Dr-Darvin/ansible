@@ -1,0 +1,3 @@
+Handlers are used to start , stop , restart services.
+
+Once a configuration is changed usually a service needs to be restarted for that we can use handlers
