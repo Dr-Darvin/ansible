@@ -21,3 +21,7 @@
 
 # to get all the tags in a playook.
 #  ansible-playbook play_book_name.yaml --list-tags 
+
+
+# to skip a playbook with specific tags 
+# ansible-playbook play_book_name.yaml --skip-tags tag_name
