@@ -1,0 +1,16 @@
+--- 
+- name: define a variable 
+  hosts: localhost
+  vars:
+    package: apach2
+
+  tasks:  
+    - name: install package
+      ansible.builtin.apt:
+        name: "{{ package }}"
+        state: present
+    
+    - name: start the service
+      service:  
+        name: "{{ package }}"
+        state: started
