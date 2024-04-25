@@ -6,8 +6,8 @@
       ansible.builtin.apt: 
         name: apache2
         state: present
-      tags:
-        - i-apache2
+      tags: i-apache2 # these both methods are correct 
+
 
     - name: start apache2 
       service:
