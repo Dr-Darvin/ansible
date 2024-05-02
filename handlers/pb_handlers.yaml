@@ -23,4 +23,4 @@
         - name: restart apache 
           service:  
             name: apache2
-            state: resarted
+            state: 
