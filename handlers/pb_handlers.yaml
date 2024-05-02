@@ -1,8 +1,8 @@
 ---
-- name: verify apacehe installatoin
+- name: verify apache installation
   hosts: localhost
   tasks:
-    - name: apache latest verificatiion 
+    - name: apache latest verification 
       ansible.builtin.apt:
         name: apache2 
         state: latest
@@ -13,14 +13,14 @@
         dest: /etc/apache2/apache.conf
       notify:
         - restart apache 
-      
+
     - name: ensure apache is running 
       service:
         name: apache2 
         state: started 
 
-      handlers:
-        - name: restart apache 
-          service:  
-            name: apache2
-            state: 
+  handlers:
+    - name: restart apache 
+      service:  
+        name: apache2
+        state: restarted
